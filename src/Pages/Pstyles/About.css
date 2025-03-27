@@ -1,0 +1,171 @@
+/* About Page Container */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f9fc 0%, #f1f4f8 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(65, 88, 208, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(200, 80, 192, 0.05) 0%, transparent 50%);
+  animation: backgroundPulse 15s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.about-page h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleReveal 1s ease-out;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: contentFade 1s ease-out 0.3s both;
+  transform-origin: center;
+}
+
+@keyframes contentFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-page p::before,
+.about-page p::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+  animation: floatingOrbs 20s linear infinite;
+}
+
+.about-page p::before {
+  top: -20px;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.about-page p::after {
+  bottom: -20px;
+  right: -20px;
+  animation-delay: -10s;
+}
+
+@keyframes floatingOrbs {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(10px, 10px) scale(1.1);
+  }
+  50% {
+    transform: translate(0, 20px) scale(1);
+  }
+  75% {
+    transform: translate(-10px, 10px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.about-page p:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-page h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-page p {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 2rem 1rem;
+  }
+
+  .about-page h2 {
+    font-size: 2rem;
+  }
+
+  .about-page p {
+    font-size: 1rem;
+    padding: 1.25rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .about-page {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  }
+
+  .about-page p {
+    background: rgba(40, 40, 40, 0.9);
+    color: #e0e0e0;
+  }
+}

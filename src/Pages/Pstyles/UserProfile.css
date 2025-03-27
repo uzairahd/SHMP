@@ -1,0 +1,35 @@
+.user-profile {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-section {
+    margin-bottom: 30px;
+  }
+  
+  .account-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .order-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .order-products {
+    margin-top: 10px;
+  }
+  
+  .product-item {
+    margin-left: 20px;
+  }

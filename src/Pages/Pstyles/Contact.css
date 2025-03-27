@@ -1,0 +1,184 @@
+/* Contact Page Container */
+.contact-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f9fc 0%, #f1f4f8 100%);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Animated Background */
+  .contact-page::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      linear-gradient(45deg, rgba(65, 88, 208, 0.03) 25%, transparent 25%, transparent 75%, rgba(65, 88, 208, 0.03) 75%, rgba(65, 88, 208, 0.03)),
+      linear-gradient(45deg, rgba(200, 80, 192, 0.03) 25%, transparent 25%, transparent 75%, rgba(200, 80, 192, 0.03) 75%, rgba(200, 80, 192, 0.03));
+    background-size: 60px 60px;
+    animation: patternMove 30s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes patternMove {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Contact Content Container */
+  .contact-page h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleSlide 1s ease-out;
+  }
+  
+  @keyframes titleSlide {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .contact-page p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    padding: 1.5rem 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    animation: slideUp 0.6s ease-out both;
+  }
+  
+  .contact-page p:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .contact-page p:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Contact Info Icons */
+  .contact-page p::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+  
+  .contact-page p:nth-child(2)::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234158D0'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+  }
+  
+  .contact-page p:nth-child(3)::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C850C0'%3E%3Cpath d='M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z'/%3E%3C/svg%3E");
+  }
+  
+  /* Hover Effects */
+  .contact-page p:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(65, 88, 208, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  /* Floating Decoration */
+  .contact-page::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.1;
+    z-index: 0;
+    animation: float 10s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -30px) scale(1.1); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 3rem 1.5rem;
+    }
+  
+    .contact-page h2 {
+      font-size: 2.5rem;
+    }
+  
+    .contact-page p {
+      font-size: 1.1rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-page {
+      padding: 2rem 1rem;
+    }
+  
+    .contact-page h2 {
+      font-size: 2rem;
+    }
+  
+    .contact-page p {
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .contact-page {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
+  
+    .contact-page p {
+      background: rgba(40, 40, 40, 0.9);
+      color: #e0e0e0;
+    }
+  }
