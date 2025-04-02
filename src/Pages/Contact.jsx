@@ -5,8 +5,9 @@ function Contact() {
   return (
     <div className="contact-page">
       <h2>Contact Us</h2>
-      <p>Email: sheshaa3@aggressiveboy.com</p>
-      <p>Phone: 9999999999</p>
+      <p>Email: thriftflow@gmail.com</p>
+      <p>Phone: 9751552842</p>
+      <p>LinkedIn/Instagram: ThriftFlow</p>
     </div>
   );
 }

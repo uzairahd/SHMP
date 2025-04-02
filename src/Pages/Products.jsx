@@ -67,7 +67,7 @@ function Products({ user }) {
   return (
     <div className="products-page">
       <section className="products-header">
-        <h1>Second-Hand Marketplace</h1>
+        <h1>ThriftFlow</h1>
         <p>Browse quality pre-owned items at great prices</p>
       </section>
 

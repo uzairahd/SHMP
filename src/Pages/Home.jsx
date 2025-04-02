@@ -107,7 +107,7 @@ function Home({ user, setUser }) {
 
       <section className="hero">
         <div className="hero-content">
-          <h1>Second-Hand Marketplace</h1>
+          <h1>ThriftFlow</h1>
           <p>Buy, sell, and discover pre-owned treasures at amazing prices.</p>
           <div className="hero-buttons">
             <button className="shop-now-button" onClick={handleShopNow}>Shop Now</button>
@@ -143,7 +143,7 @@ function Home({ user, setUser }) {
       <section className="about-section">
         <div className="about-content">
           <h2>About Our Marketplace</h2>
-          <p>Our second-hand marketplace connects buyers and sellers, giving items a second life while helping you save money and reduce waste.</p>
+          <p>Our ThriftFlow connects buyers and sellers, giving items a second life while helping you save money and reduce waste.</p>
           <p>Whether you're looking to declutter your home or find unique pre-owned treasures, our platform makes it easy to buy and sell with confidence.</p>
         </div>
       </section>

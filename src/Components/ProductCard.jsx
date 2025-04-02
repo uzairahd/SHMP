@@ -19,7 +19,6 @@ function ProductCard({ product, addToCart }) {
 
   return (
     <div className="product-card">
-      <img src={product.imageUrl || 'https://via.placeholder.com/250'} alt={product.name} className="product-image" />
       <div className="product-details">
         <h3>{product.name}</h3>
         <p className="price">${product.price.toFixed(2)}</p>
